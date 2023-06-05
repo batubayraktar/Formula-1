@@ -1,0 +1,78 @@
+
+ *{
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  @font-face {
+    font-family: Formula1Regular;
+    src: url(../font/Formula1-Regular_web_0.ttf);
+  }
+  @font-face {
+    font-family: Formula1Bold;
+    src: url(../font/Formula1-Bold_web_0.ttf);
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+  /* font-family: 'Titillium Web', sans-serif; */
+  
+  body{
+    background-color: #14141e;
+    
+  }
+.behaaldePunten{
+    color:orange;
+    text-align: center;
+    font-family:Formula1Bold;
+    margin-top: 30vh;
+  }
+  
+  .flex-column{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .flex-center{
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .justify-center{
+    justify-content: center;
+  }
+  
+  .text-center{
+    text-align: center;
+  }
+  
+  .hidden{
+    display:none;
+  }
+  #finalScore{
+     font-size: 80px;
+     margin-top: 2vh;
+     margin-bottom: 4vh;
+     color: orange;
+     font-family: Formula1Bold;
+      }
+  .btn{
+    font-family: Formula1Bold;
+    font-size: 30px;
+    padding: 2rem;
+    width: 30rem;
+    text-decoration: none;
+    color: black;
+    background: orange;
+  }
+  .btn:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 orange;
+    transition: transform 150ms;
+    transform: scale(1.03);
+  }
+  .btn[disabled]:hover{
+    cursor:not-allowed;
+    box-shadow: none;
+    transform: none;
+  }
+  

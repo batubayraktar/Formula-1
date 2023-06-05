@@ -1,0 +1,375 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  text-decoration: none;
+
+  list-style-type: none;
+}
+@font-face {
+  font-family: Formula1Regular;
+  src: url(../../font/Formula1-Regular_web_0.ttf);
+}
+@font-face {
+  font-family: Formula1Bold;
+  src: url(../../font/Formula1-Bold_web_0.ttf);
+}
+body{
+  background-color: #14141e;
+
+}
+
+/* NAV */
+header{
+  background-image: url(../media/tickets_bg.png);
+  background-size: cover;
+  -webkit-box-shadow: inset 0px -50px 24px -16px #14141E; 
+  box-shadow: inset 0px -50px 24px -16px #14141E;
+}
+header a{
+  color: white;
+}
+#logo{
+  width: 10rem;
+  margin: 10px;
+  fill: white;
+  position: fixed;
+}
+#logo2{
+  padding-top: 23px;
+  width: 10rem;
+  margin: 10px;
+  fill: white;
+  position: fixed;
+}
+.wrapper{
+  text-align: end;
+  position: fixed;
+  top: 0;
+  /*left: -100%;*/
+  right: -100%;
+  width: 200px;
+  font-family: Formula1Regular;
+  background-color: rgba(255, 255, 255, 0.651);
+  transition: all 0.6s ease-in-out;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.wrapper ul li a{
+  color: #14141e;
+}
+.wrapper ul {
+  font-family: Formula1Regular;
+  margin: 20px;
+  margin-top: 80px;
+}
+.wrapper li {
+  padding: 10px;
+}
+ #active:checked ~ .wrapper{
+  /*left: 0;*/
+  right:0;
+}
+.menu-btn{
+  position: fixed;
+  z-index: 2;
+  right: 20px;
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: end;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.menu-btn span,
+.menu-btn:before,
+.menu-btn:after{
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 30%;
+  width: 40%;
+  /* COLOR TO MENU BUTTON */
+  border-bottom: 2px solid white;
+  transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.menu-btn:before{
+  transform: translateY(-8px);
+}
+.menu-btn:after{
+  transform: translateY(8px);
+}
+  
+  
+.close {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transition: .6s;
+}
+  
+  /* closing animation */
+  /* COLOR TO CLOSE MENU */
+#active:checked + .menu-btn span {
+  transform: scaleX(0);
+}
+#active:checked + .menu-btn:before {
+  transform: rotate(45deg);
+  border-color: #14141e;
+}
+#active:checked + .menu-btn:after {
+  transform: rotate(-45deg);
+  border-color: #14141e;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  text-align: end;
+  width: 100%;
+  color: white;
+}
+.content .title{
+  font-size: 40px;
+  font-weight: 700;
+}
+.content p{
+  font-size: 35px;
+  font-weight: 600;
+}
+/* ///////////////////////////////////////////// */
+
+
+#container_nieuws{
+  font-family: Formula1Regular;
+}
+
+#ticketsHeader{
+  color: white;
+  font-size: 70px;
+  font-family: Formula1Bold;
+  width: 70vw;
+  margin: auto;
+  padding-top: 100px;
+  padding-bottom: 400px;
+}
+
+main{
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+/* :::::::::::::::: TICKETS ::::::::::::::::: */
+
+#buyTickets{
+  width: 50vw;
+  margin: auto;
+
+}
+.tickets_btn_class{
+  height: 60px;
+  font-family: Formula1Regular;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+#tickets_choice{
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 2fr;
+  gap: 10px;
+}
+
+#ticekts_name, #ticekts_date{
+  width: 100%;
+  margin-bottom: 10px;
+  
+}
+
+#ticekts_bank{
+  width: 100%;
+}
+#ticekts_afrekenen{
+  height: 60px;
+  font-family: Formula1Bold;
+  font-size: 20px;
+  background-color: orange;
+  color: white;
+}
+#ticekts_volwassen, #ticekts_kind{
+  width: 100%;
+}
+
+#span_kind2jaar{
+  text-align: end;
+  font-family: Formula1Regular;
+  font-size: 13px;
+  color: orange;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+#label_kaartjes{
+  font-size: 30px;
+  font-family: Formula1Bold;
+  color: white;
+}
+#prijs{
+  width: 100%;
+  font-family: Formula1Regular;
+  color: white;
+  text-decoration: orange underline;
+}
+#kopenknopenprijs{
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 2fr;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+input{
+  box-sizing:border-box
+} 
+
+#ditPrijs{
+  color: orange;
+}
+
+#infoTickets{
+  margin: auto;
+  width: 50vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#pic1, #pic2{
+  width: 100%;
+}
+
+#nameTickets{
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 2fr;
+  gap: 10px;
+}
+
+#line{
+  margin-top: 20px;
+  border-bottom: orange 1px solid;
+}
+
+#aantalKaartjesEventenPrijs,#aantalKaartjesEventenPrijs2{
+  font-family: Formula1Regular;
+  color: white;
+}
+
+#aantalKaartjesV, #aantalKaartjesK{
+  color: orange;
+}
+
+/* ///////////////////FOOTER///////////////////// */
+#borderfootertop{
+  margin-left: -200px;
+}
+#truefalsefooter{
+  margin-left: 200px;
+}
+.containerFooter{
+	max-width: 1170px;
+	margin:auto;
+}
+#logoFooter{
+	width: 25vw;
+	margin-left: 30%;
+	padding: auto;
+  margin-top: 10%;
+}
+.rowFooter{
+	display: flex;
+	flex-wrap: wrap;
+}
+#contentFooterColom{
+	list-style: none;
+}
+.footer{
+	background-color: #14141e;
+  padding-top:30px;
+	padding-bottom: 10px;
+}
+.footer-col{
+   width: 30%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+	font-family: Formula1Bold;
+	margin-left: 30%;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: orange;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	margin-left: 30%;
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	font-family: Formula1Regular;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: orange;
+	padding-left: 8px;
+}
+.truefalse{
+	color: #bbbbbb;
+	font-family: Formula1Regular;
+	font-size: 13px;
+	width: max-content;
+	margin: auto;
+	margin-top: 40px;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    /* margin-bottom: 30px; */
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+#borderfootertop{
+  border-top: 1px solid white;
+}

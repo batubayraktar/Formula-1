@@ -1,0 +1,705 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  text-decoration: none;
+
+  list-style-type: none;
+}
+@font-face {
+  font-family: Formula1Regular;
+  src: url(../font/Formula1-Regular_web_0.ttf);
+}
+@font-face {
+  font-family: Formula1Bold;
+  src: url(../font/Formula1-Bold_web_0.ttf);
+}
+/* NAV */
+body{
+  background-color: #14141e;
+}
+#myVideo{
+  z-index: -1 ;
+  width: 100vw;
+  height: 700px;
+  right: 0;
+  position: absolute;
+  object-fit: cover;
+
+}
+
+header{
+  height: 700px;
+  -webkit-box-shadow: inset 0px -50px 24px -16px #14141E; 
+box-shadow: inset 0px -50px 24px -16px #14141E;
+}
+
+#headerNieuwsH .navigatieBalk, #indexHeader{
+  position: relative;
+  z-index: 1;
+}
+.afbeelding{
+  border-bottom: 5px solid orange;
+  border-left: 5px solid transparent;
+  width: 100%;
+}
+header a{
+  color: white;
+}
+#logo{
+  width: 10rem;
+  margin: 10px;
+  fill: white;
+  position: fixed;
+  z-index: 1;
+}
+#logo2{
+  padding-top: 23px;
+  width: 10rem;
+  margin: 10px;
+  fill: white;
+  position: fixed;
+  z-index: 1;
+}
+.wrapper{
+  text-align: end;
+  position: fixed;
+  top: 0;
+  /*left: -100%;*/
+  right: -100%;
+  width: 200px;
+  font-family: Formula1Regular;
+  background-color: rgba(255, 255, 255, 0.651);
+  transition: all 0.6s ease-in-out;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.wrapper ul li a{
+  color: #14141e;
+}
+
+.wrapper ul {
+  font-family: Formula1Regular;
+  margin: 20px;
+  margin-top: 80px;
+}
+.wrapper li {
+  padding: 10px;
+}
+ #active:checked ~ .wrapper{
+  /*left: 0;*/
+  right:0;
+}
+.menu-btn{
+  position: fixed;
+  z-index: 2;
+  right: 20px;
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: end;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.menu-btn span,
+.menu-btn:before,
+.menu-btn:after{
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 30%;
+  width: 40%;
+  /* COLOR TO MENU BUTTON */
+  border-bottom: 2px solid white;
+  transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.menu-btn:before{
+  transform: translateY(-8px);
+}
+.menu-btn:after{
+  transform: translateY(8px);
+}
+  
+  
+.close {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transition: .6s;
+}
+  
+  /* closing animation */
+  /* COLOR TO CLOSE MENU */
+#active:checked + .menu-btn span {
+  transform: scaleX(0);
+}
+#active:checked + .menu-btn:before {
+  transform: rotate(45deg);
+  border-color: #14141e;
+}
+#active:checked + .menu-btn:after {
+  transform: rotate(-45deg);
+  border-color: #14141e;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  text-align: end;
+  width: 100%;
+  color: white;
+}
+.content .title{
+  font-size: 40px;
+  font-weight: 700;
+}
+.content p{
+  font-size: 35px;
+  font-weight: 600;
+}
+  
+
+/* COUNTER */
+#counterMain{
+  padding-bottom: 200px;
+  margin: auto;
+  width: 50vw;
+  color: white;
+  position: relative;
+  z-index: 1;
+
+}
+#counter{
+  font-family: Formula1Bold;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  font-size: 80px;
+  padding-top: 10px;
+}
+
+.tellerDUMS{
+  color: white;
+  font-size: 20px;
+  text-align: start;
+  text-decoration: orange underline;
+}
+
+
+
+/* /////////////////////////////////////// */
+
+#indexHeader{
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  font-size: 70px;
+  font-family: Formula1Bold;
+  width: 70vw;
+  margin: auto;
+}
+
+/* MAIN */
+#zandvoortKop{
+  margin-top: 50px;
+  font-family: Formula1Bold;
+  font-size: 70px;
+  margin-bottom: 30px;
+  color: white;
+}
+#zandvoort2022{
+  width: 70vw;
+  margin: auto;
+}
+
+#hetCircuit{
+  padding-top: 100px;
+  width: 70vw;
+  margin: auto;
+  font-family: Formula1Regular;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 160px;
+  margin-bottom: 100px;
+}
+
+#kopCircuit{
+  font-family: Formula1Bold;
+  font-size: 70px;
+  margin-bottom: 30px;
+}
+#puntCircuit, .lbs{
+  color: orange;
+}
+
+.lbs{
+  font-family: Formula1Bold;
+}
+
+.getallencircuit{
+  font-size: 3vw;
+  color: white;
+}
+
+#imgCircuit{
+  gap: 80px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.spanGetallen{
+  font-family: Formula1Regular;
+  font-size: 1.5vw;
+}
+
+/* ////////////////////NIEUWS KOP/////////////////// */
+
+#gridNieuwsIndex{
+  width: 70vw;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  color: white;
+  font-family: Formula1Regular;
+}
+
+#kopNieuwsIndex{
+  width: 70vw;
+  margin: auto;
+  font-family: Formula1Bold;
+  font-size: 70px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+#backNieuws{
+  color: orange;
+}
+
+.datumNieuws{
+  text-decoration: 2px orange underline;
+  padding-top: 20px;
+}
+.nieuwstext{
+  padding-top: 20px;
+}
+
+.buttonNieuws{
+  font-family: Formula1Regular;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 0;
+  margin-bottom: 50px;
+}
+
+
+/* //////////////////////STREET VIEUW///////////////////////// */
+#streetVieuwF1{
+  width: 70vw;
+  margin: auto;
+  margin-bottom: 100px;
+}
+#street{
+  width: 100%;
+  height: 550px;
+  margin: auto;
+  border-radius: none;
+}
+
+
+
+/* /////////////////////////////agenda//////////////////////////// */
+.eventKop{
+  color: white;
+  font-family: Formula1Bold;
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.eventBorder{
+  color: #14141e;
+  font-family: Formula1Regular;
+  border-radius: 0px 20px;
+  background-color: white;
+  width: 100%;
+
+  padding-bottom: 0;
+}
+.extrapadding{
+  padding: 10px;
+}
+.contentNextEvents{
+  border-bottom: 1px solid #14141e;
+  border-top: 1px solid #14141e;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.mapNextEvents{
+  text-align: center;
+
+}
+.mapNextEvents2{
+  width: 50%;
+}
+.landKop{
+  font-family: Formula1Bold;
+}
+#containerEventsNext{
+  width: 70vw;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+#flagItaly{
+  border: 1px solid #14141e;
+  border-radius: 5px;
+  height: 40px;
+  justify-self: end;
+}
+#dateAndFlag{
+  height: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#agenda{
+  margin-bottom: 100px;
+}
+#kopAgendaIndex{
+  width: 70vw;
+  margin: auto;
+  font-family: Formula1Bold;
+  font-size: 70px;
+  margin-bottom: 30px;
+  color: white;
+}
+.orange{
+  color: orange;
+}
+
+.eventBorder:hover{
+  background-color: orange;
+}
+
+#mapF1{
+  width: 200px;
+  margin-left: -60px;
+  margin-top: -20px;
+}
+
+
+
+/* ///////////////////FOOTER///////////////////// */
+#borderfootertop{
+  margin-left: -200px;
+}
+#truefalsefooter{
+  margin-left: 200px;
+}
+.containerFooter{
+	max-width: 1170px;
+	margin:auto;
+}
+#logoFooter{
+	width: 25vw;
+	margin-left: 30%;
+	padding: auto;
+  margin-top: 10%;
+}
+.rowFooter{
+	display: flex;
+	flex-wrap: wrap;
+}
+#contentFooterColom{
+	list-style: none;
+}
+.footer{
+	background-color: #14141e;
+  padding-top:30px;
+	padding-bottom: 10px;
+}
+.footer-col{
+   width: 30%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+	font-family: Formula1Bold;
+	margin-left: 30%;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: orange;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	margin-left: 30%;
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	font-family: Formula1Regular;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: orange;
+	padding-left: 8px;
+}
+.truefalse{
+	color: #bbbbbb;
+	font-family: Formula1Regular;
+	font-size: 13px;
+	width: max-content;
+	margin: auto;
+	margin-top: 40px;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    /* margin-bottom: 30px; */
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+#borderfootertop{
+  border-top: 1px solid white;
+}
+
+
+
+/* //////////////////TEAMS/////////////////// */
+.table-container {
+  width: 75%;
+  min-width: 600px;
+  background-color:  #14141e;
+  /* border: 1px solid black; */
+  margin: auto;
+  margin-top: 50px;
+  font-family: Formula1Bold;
+}
+
+/* HOVER */
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+  
+  .kopVraag{
+    font-family: Formula1Bold;
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  #meVragenSup{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  /* TEAMS */
+  
+  /* VARIABLES */
+  
+  :root {
+    --mercedes-color: #00d2be;
+    --redbull-color: #0600ef;
+    --ferrari-color: #dc0000;
+    --hover-color: #38383f;
+    --mclaren-color: #ff8700;
+    --racing-point-color: #f596c8;
+    --renault-color: #fff500;
+    --haasferrari-color: #c35656;
+    --alfaromeo-color:#00ff3c;
+    --alphatauri-color:#4d49b8;
+    --williamsmercedes-color: #FFFFFF;
+    --astonmartin-color: #045517;
+  }
+  
+  .table-container {
+    width: 70vw;
+    min-width: 600px;
+    background-color:  #14141e;
+    /* border: 1px solid black; */
+    margin: auto;
+    margin-top: 50px;
+    font-family: Formula1Bold;
+  }
+  
+  .table-container th {
+    display: none;
+  }
+  
+  .table-container tr {
+    display: flex;
+    padding: 0;
+    border-radius: 10px;
+    border: 1px solid orange;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .table-container tr.table-content {
+    justify-content: space-between;
+    padding: 0;
+  }
+  
+  .table-container tr.table-content td {
+    margin: 0 20px 0 10px;
+    font-size: 1.4rem;
+    color:white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .table-container tr.table-content td .position {
+    border-right: 5px solid var(--mercedes-color);
+    padding-right: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  
+  .table-container tr.table-content td .driver-name {
+    margin-left: 10px;
+  }
+  
+  .table-container tr.table-content td .driver-surname {
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+  
+  .table-container tr.table-content td .team {
+    font-size: 1rem;
+    color: orange;
+    margin-left: 10px;
+  }
+  
+  .table-container tr.table-content td .points {
+    background-color: #14141e;
+    border: 1px solid orange;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+  
+  .table-container tr.table-content td i {
+    margin-left: 20px;
+    color: #e10600;
+    font-size: 18px;
+  }
+  
+  /* HOVER */
+  
+  .table-container tr:hover {
+    background-color: var(--hover-color);
+    color: red;
+  }
+  
+  .table-container tr:hover .points  {
+    color: red;
+  }
+  .table-container tr:hover .driver-name  {
+    color: red;
+  }
+  .table-container tr:hover .driver-surname  {
+    color: red;
+  }
+    /* DRIVER 1 */
+  .table-container .table-content.driver1 .position {
+    border-right: 5px solid var(--ferrari-color);
+  }
+
+  /* DRIVER 2 */
+  
+  .table-container .table-content.driver2 .position {
+    border-right: 5px solid var(--mercedes-color);
+  }
+  /* DRIVER 3 */
+  .table-container .table-content.driver3 .position {
+   border-right: 5px solid var(--ferrari-color);
+    }
+  
+  /* DRIVER 4 */
+  
+  .table-container .table-content.driver4 .position {
+    border-right: 5px solid var(--redbull-color);
+  }
+  
+  /* DRIVER 5 */
+  
+  .table-container .table-content.driver5 .position {
+    border-right: 5px solid var(--mercedes-color);
+  }
+  .teamsTitel{
+    width: max-content;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 50px;
+    color: white;
+    font-family: Formula1Bold;
+  }
+
+  .table-container{
+    margin-bottom: 100px;
+  }
+
+
+  /* ///////////////quiz/////////////////// */
+#quiz{
+  width: 70vw;
+  margin: auto;
+  margin-bottom: 100px;
+}
+.quizTekst{
+  font-size: 30px;
+  color: orange;
+  font-family: Formula1Bold;
+  margin-bottom: 50px;
+}
+
+#btnquiz{
+  font-family: Formula1Bold;
+  font-size: 30px;
+  padding: 2rem;
+  color: black;
+  background: orange;
+  width: 600px;
+}

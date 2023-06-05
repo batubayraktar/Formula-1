@@ -1,0 +1,345 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  text-decoration: none;
+  list-style-type: none;
+}
+@font-face {
+  font-family: Formula1Regular;
+  src: url(../../font/Formula1-Regular_web_0.ttf);
+}
+@font-face {
+  font-family: Formula1Bold;
+  src: url(../../font/Formula1-Bold_web_0.ttf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+/* font-family: 'Titillium Web', sans-serif; */
+
+body{
+  background-color: #14141e;
+  
+}
+
+/* NAV */
+header{
+  background-image: url(../media/bg_nieuws.jpg);
+  background-size: cover;
+  -webkit-box-shadow: inset 0px -50px 24px -16px #14141E; 
+  box-shadow: inset 0px -50px 24px -16px #14141E;}
+header a{
+  color: white;
+}
+#logo{
+  width: 10rem;
+  margin: 10px;
+  fill: white;
+  position: fixed;
+}
+#logo2{
+  padding-top: 23px;
+  width: 10rem;
+  margin: 10px;
+  fill: white;
+  position: fixed;
+}
+.wrapper{
+  text-align: end;
+  position: fixed;
+  top: 0;
+  /*left: -100%;*/
+  right: -100%;
+  width: 190px;
+  font-family: Formula1Regular;
+  background-color: rgba(255, 255, 255, 0.651);
+  transition: all 0.6s ease-in-out;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.wrapper ul li a{
+  color: #14141e;
+}
+.wrapper ul {
+  font-family: Formula1Regular;
+  margin: 20px;
+  margin-top: 80px;
+}
+.wrapper li {
+  padding: 10px;
+}
+ #active:checked ~ .wrapper{
+  /*left: 0;*/
+  right:0;
+}
+.menu-btn{
+  position: fixed;
+  z-index: 2;
+  right: 20px;
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: end;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.menu-btn span,
+.menu-btn:before,
+.menu-btn:after{
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 30%;
+  width: 40%;
+  /* COLOR TO MENU BUTTON */
+  border-bottom: 2px solid white;
+  transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.menu-btn:before{
+  transform: translateY(-8px);
+}
+.menu-btn:after{
+  transform: translateY(8px);
+}
+  
+  
+.close {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transition: .6s;
+}
+  
+  /* closing animation */
+  /* COLOR TO CLOSE MENU */
+#active:checked + .menu-btn span {
+  transform: scaleX(0);
+}
+#active:checked + .menu-btn:before {
+  transform: rotate(45deg);
+  border-color: #14141e;
+}
+#active:checked + .menu-btn:after {
+  transform: rotate(-45deg);
+  border-color: #14141e;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  text-align: end;
+  width: 100%;
+  color: white;
+}
+.content .title{
+  font-size: 40px;
+  font-weight: 700;
+}
+.content p{
+  font-size: 35px;
+  font-weight: 600;
+}
+/* /////////////////////// NIEUWS ////////////////////// */
+
+
+#container_nieuws{
+  font-family: Formula1Regular;
+}
+
+#nieuwsHeader{
+  color: white;
+  font-size: 70px;
+  font-family: Formula1Bold;
+  width: 70vw;
+  margin: auto;
+  padding-top: 100px;
+  padding-bottom: 400px;
+}
+
+main{
+  margin-top: 40px;
+}
+
+#nieuwsContainer{
+  font-family: Formula1Regular;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 70vw;
+  margin: auto;
+  gap: 20px;
+  color: white;
+}
+
+#nieuws0,#nieuws1, #nieuws2,#nieuws3,#nieuws4,#nieuws5,#nieuws6,#nieuws7,#nieuws8,#nieuws9,#nieuws10,#nieuws11,#nieuws12,#nieuws13,#nieuws14,#nieuws15,#nieuws16,#nieuws17,#nieuws18,#nieuws19,#nieuws20,#nieuws21,#nieuws22,#nieuws23,#nieuws24{
+  margin: auto;
+  margin-top:  -1px;
+}
+
+.datumNieuws{
+  padding-top: 20px;
+  text-decoration: orange 2px underline;
+}
+
+.nieuwstext{
+  padding-top: 20px;
+  color: white;
+  width: 448px;
+  
+}
+.buttonNieuws{
+  margin-top: 20px;
+  padding: 10px;
+  margin-bottom: 50px;
+  font-family: Formula1Regular;
+  border-radius: 0;
+}
+#backNieuws{
+  color: orange;
+}
+/* /////////////// CLICKED NIEUWS /////////////// */
+#nieuwsClickMain{
+  color: white;
+  font-family: Formula1Regular;
+  width: 55vw;
+  margin: auto;
+}
+.afbeeldingClick{
+  width: 55vW;
+}
+.afbeelding{
+  width: 100%;
+  top: -1px;
+  border-bottom: 5px solid orange;
+  border-left: 5px solid transparent;
+}
+.kopNieuws{
+  font-family: Formula1Bold;
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+
+.datumNieuwsClick{
+  padding-top: 20px;
+  text-decoration: orange 2px underline;
+  padding-bottom: 40px;
+}
+
+.kopNieuws2{
+  margin-top: 40px;
+  font-family: Formula1Bold;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.plattetextNieuws{
+  margin-top: 40px;
+  font-family: 'Titillium Web', sans-serif;
+  margin-bottom: 40px;
+}
+
+/* ///////////////////FOOTER///////////////////// */
+#borderfootertop{
+  margin-left: -200px;
+}
+#truefalsefooter{
+  margin-left: 200px;
+}
+.containerFooter{
+	max-width: 1170px;
+	margin:auto;
+}
+#logoFooter{
+	width: 25vw;
+	margin-left: 30%;
+	padding: auto;
+  margin-top: 10%;
+}
+.rowFooter{
+	display: flex;
+	flex-wrap: wrap;
+}
+#contentFooterColom{
+	list-style: none;
+}
+.footer{
+	background-color: #14141e;
+  padding-top:30px;
+	padding-bottom: 10px;
+}
+.footer-col{
+   width: 30%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+	font-family: Formula1Bold;
+	margin-left: 30%;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: orange;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	margin-left: 30%;
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	font-family: Formula1Regular;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: orange;
+	padding-left: 8px;
+}
+.truefalse{
+	color: #bbbbbb;
+	font-family: Formula1Regular;
+	font-size: 13px;
+	width: max-content;
+	margin: auto;
+	margin-top: 40px;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    /* margin-bottom: 30px; */
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+#borderfootertop{
+  border-top: 1px solid white;
+}

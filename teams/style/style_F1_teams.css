@@ -1,0 +1,578 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  @font-face {
+    font-family: Formula1Regular;
+    src: url(../font/Formula1-Regular_web_0.ttf);
+  }
+  @font-face {
+    font-family: Formula1Bold;
+    src: url(../font/Formula1-Bold_web_0.ttf);
+  }
+  #punt{
+    color: orange;
+  }
+  body{
+    background-color: #14141e;
+  
+  }
+  a{
+    text-decoration: none;
+    color: #14141e;
+  }
+  /* NAV */
+  header{
+    background-image: url(../media/teams.jpeg);
+    -webkit-box-shadow: inset 0px -50px 24px -16px #14141E; 
+    box-shadow: inset 0px -50px 24px -16px #14141E;
+  }
+  header a{
+    color: white;
+  }
+  #logo{
+    width: 10rem;
+    margin: 10px;
+    fill: white;
+    position: fixed;
+  }
+  #logo2{
+    padding-top: 23px;
+    width: 10rem;
+    margin: 10px;
+    fill: white;
+    position: fixed;
+  }
+  .wrapper{
+    text-align: end;
+    position: fixed;
+    top: 0;
+    /*left: -100%;*/
+    right: -100%;
+    width: 200px;
+    font-family: Formula1Regular;
+    background-color: rgba(255, 255, 255, 0.651);
+    transition: all 0.6s ease-in-out;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  .wrapper ul li a{
+    color: #14141e;
+  }
+  .wrapper ul {
+    font-family: Formula1Regular;
+    margin: 20px;
+    margin-top: 80px;
+  }
+  .wrapper li {
+    padding: 10px;
+  }
+   #active:checked ~ .wrapper{
+    /*left: 0;*/
+    right:0;
+  }
+  .menu-btn{
+    position: fixed;
+    z-index: 2;
+    right: 20px;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: end;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-btn span,
+  .menu-btn:before,
+  .menu-btn:after{
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 30%;
+    width: 40%;
+    /* COLOR TO MENU BUTTON */
+    border-bottom: 2px solid white;
+    transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  .menu-btn:before{
+    transform: translateY(-8px);
+  }
+  .menu-btn:after{
+    transform: translateY(8px);
+  }
+    
+    
+  .close {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transition: .6s;
+  }
+    
+    /* closing animation */
+    /* COLOR TO CLOSE MENU */
+  #active:checked + .menu-btn span {
+    transform: scaleX(0);
+  }
+  #active:checked + .menu-btn:before {
+    transform: rotate(45deg);
+    border-color: #14141e;
+  }
+  #active:checked + .menu-btn:after {
+    transform: rotate(-45deg);
+    border-color: #14141e;
+  }
+  
+  input[type="checkbox"]{
+    display: none;
+  }
+  .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    text-align: end;
+    width: 100%;
+    color: white;
+  }
+  .content .title{
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .content p{
+    font-size: 35px;
+    font-weight: 600;
+  }
+  /* ///////////////////////////////////////////// */
+  
+  #contactHeader{
+    color: white;
+    font-size: 70px;
+    font-family: Formula1Bold;
+    width: 70vw;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 400px;
+  }
+  
+  main{
+    margin-top: 40px;
+    margin-bottom: 100px;
+  }
+  
+  /* :::::::::::::::: contact MAIN ::::::::::::::::: */
+  #support{
+    width: 70vw;
+    margin: auto;
+    
+  }
+  .supTextKop{
+    font-size: 70px;
+    font-family: Formula1Bold;
+    color: white;
+  }
+  #supTextPlat{
+    color: orange;
+    font-family: Formula1Regular;
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+  .inputSuport{
+    width: 100%;
+    font-family: Formula1Regular;
+    font-size: 20px;
+    height: 60px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
+  #uwvraag{
+    padding-top: 10px;
+    min-height: 100px;
+    max-width: 70vw;
+    min-width: 70vw;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  #submitSup{
+    font-family: Formula1Bold;
+    width: 1fr;
+    background-color: orange;
+    color: black;
+  }
+  input{
+    box-sizing:border-box
+  } 
+  
+  #gridContSup{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  #colorKop{
+    color: orange;
+  }
+  #supTextPlat{
+    margin-top: 10px;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+  
+  .kopVraag{
+    font-family: Formula1Bold;
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  #meVragenSup{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  /* TEAMS */
+  
+  /* VARIABLES */
+  
+  :root {
+    --mercedes-color: #00d2be;
+    --redbull-color: #0600ef;
+    --ferrari-color: #dc0000;
+    --hover-color: #38383f;
+    --mclaren-color: #ff8700;
+    --racing-point-color: #f596c8;
+    --renault-color: #fff500;
+    --haasferrari-color: #c35656;
+    --alfaromeo-color:#00ff3c;
+    --alphatauri-color:#4d49b8;
+    --williamsmercedes-color: #FFFFFF;
+    --astonmartin-color: #045517;
+  }
+  
+  .table-container {
+    width: 70vw;
+    min-width: 600px;
+    background-color:  #14141e;
+    /* border: 1px solid black; */
+    margin: auto;
+    margin-top: 50px;
+    font-family: Formula1Bold;
+  }
+  
+  .table-container th {
+    display: none;
+  }
+  
+  .table-container tr {
+    display: flex;
+    padding: 0;
+    border-radius: 10px;
+    border: 1px solid orange;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .table-container tr.table-content {
+    justify-content: space-between;
+    padding: 0;
+  }
+  
+  .table-container tr.table-content td {
+    margin: 0 20px 0 10px;
+    font-size: 1.4rem;
+    color:white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .table-container tr.table-content td .position {
+    border-right: 5px solid var(--mercedes-color);
+    padding-right: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  
+  .table-container tr.table-content td .driver-name {
+    margin-left: 10px;
+  }
+  
+  .table-container tr.table-content td .driver-surname {
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+  
+  .table-container tr.table-content td .team {
+    font-size: 1rem;
+    color: orange;
+    margin-left: 10px;
+  }
+  
+  .table-container tr.table-content td .points {
+    background-color: #14141e;
+    border: 1px solid orange;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+  
+  .table-container tr.table-content td i {
+    margin-left: 20px;
+    color: #e10600;
+    font-size: 18px;
+  }
+  
+  /* HOVER */
+  
+  .table-container tr:hover {
+    background-color: var(--hover-color);
+    color: red;
+  }
+  
+  .table-container tr:hover .points  {
+    color: red;
+  }
+  .table-container tr:hover .driver-name  {
+    color: red;
+  }
+  .table-container tr:hover .driver-surname  {
+    color: red;
+  }
+    /* DRIVER 1 */
+  .table-container .table-content.driver1 .position {
+    border-right: 5px solid var(--ferrari-color);
+  }
+
+  /* DRIVER 2 */
+  
+  .table-container .table-content.driver2 .position {
+    border-right: 5px solid var(--mercedes-color);
+  }
+  /* DRIVER 3 */
+  .table-container .table-content.driver3 .position {
+   border-right: 5px solid var(--ferrari-color);
+    }
+  
+  /* DRIVER 4 */
+  
+  .table-container .table-content.driver4 .position {
+    border-right: 5px solid var(--redbull-color);
+  }
+  
+  /* DRIVER 5 */
+  
+  .table-container .table-content.driver5 .position {
+    border-right: 5px solid var(--mercedes-color);
+  }
+  
+  /* DRIVER 6 */
+  
+  .table-container .table-content.driver6 .position {
+    border-right: 5px solid var(--redbull-color);
+  }
+  
+  /* DRIVER 7 */
+  
+  .table-container .table-content.driver7 .position {
+    border-right: 5px solid var(--renault-color);
+  }
+  
+  /* DRIVER 8 */
+  
+  .table-container .table-content.driver8 .position {
+    border-right: 5px solid var(--mclaren-color);
+  }
+  
+  /* DRIVER 9 */
+  
+  .table-container .table-content.driver9 .position {
+    border-right: 5px solid var(--haasferrari-color);
+  }
+  
+  /* DRIVER 10 WITH EXTRA MARGIN/PADDING TO COMPENSATE EXTRA DIGIT */
+  
+  .table-container .table-content.driver10 .position {
+    border-right: 5px solid var(--alfaromeo-color);
+    /* padding-right: 7px; */
+  }
+    /* DRIVER 11 */
+  
+    .table-container .table-content.driver11 .position {
+      border-right: 5px solid var(--mclaren-color);
+    }
+    /* DRIVER 12 */
+  
+    .table-container .table-content.driver12 .position {
+      border-right: 5px solid var(--alphatauri-color);
+    }
+     /* DRIVER 13 */
+  
+     .table-container .table-content.driver13 .position {
+      border-right: 5px solid var(--alphatauri-color);
+    }
+      /* DRIVER 14 */
+  
+      .table-container .table-content.driver14 .position {
+        border-right: 5px solid var(--renault-color);
+      }
+     /* DRIVER 15 */
+  
+     .table-container .table-content.driver15 .position {
+      border-right: 5px solid var(--alfaromeo-color);
+    }
+    /* DRIVER 16 */
+  
+    .table-container .table-content.driver16 .position {
+      border-right: 5px solid var(--williamsmercedes-color);
+    }
+    /* DRIVER 17 */
+  
+    .table-container .table-content.driver17 .position {
+      border-right: 5px solid var(--haasferrari-color);
+    }
+    /* DRIVER 18 */
+  
+    .table-container .table-content.driver18 .position {
+      border-right: 5px solid var(--astonmartin-color);
+    }
+    /* DRIVER 19 */
+  
+    .table-container .table-content.driver19 .position {
+      border-right: 5px solid var(--astonmartin-color);
+    }
+    /* DRIVER 20 */
+  
+    .table-container .table-content.driver20 .position {
+      border-right: 5px solid var(--williamsmercedes-color);
+      padding-left: 7px;
+    }
+    .table-container .table-content.driver20 td {
+    margin-left: 0;
+  }
+  .teamsTitel{
+    width: max-content;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 50px;
+    color: white;
+    font-family: Formula1Bold;
+  }
+
+
+  #borderfootertop{
+    margin-left: -200px;
+  }
+  #truefalsefooter{
+    margin-left: 200px;
+  }
+  .containerFooter{
+    max-width: 1170px;
+    margin:auto;
+  }
+  #logoFooter{
+    width: 25vw;
+    margin-left: 30%;
+    padding: auto;
+    margin-top: 10%;
+  }
+  .rowFooter{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #contentFooterColom{
+    list-style: none;
+  }
+  .footer{
+    background-color: #14141e;
+    padding-top:30px;
+    padding-bottom: 10px;
+  }
+  .footer-col{
+     width: 30%;
+     padding: 0 15px;
+  }
+  .footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+    font-family: Formula1Bold;
+    margin-left: 30%;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: orange;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    margin-left: 30%;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    font-family: Formula1Regular;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: orange;
+    padding-left: 8px;
+  }
+  .truefalse{
+    color: #bbbbbb;
+    font-family: Formula1Regular;
+    font-size: 13px;
+    width: max-content;
+    margin: auto;
+    margin-top: 40px;
+  }
+  footer{
+    margin-top: 50px;
+  }
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      /* margin-bottom: 30px; */
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+  
+  #borderfootertop{
+    border-top: 1px solid white;
+  }
+
+  #orange{
+    color: orange;
+  }
